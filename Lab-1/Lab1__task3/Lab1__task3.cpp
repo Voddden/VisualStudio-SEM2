@@ -3,7 +3,7 @@
 
 /*
 В-7
-2.Посчитать сумму чётных чисел в файле
+3. Удалить все чётные числа
 */
 
 int main(int argc, char* argv[])
@@ -29,15 +29,7 @@ int main(int argc, char* argv[])
     }
 
     // считывание чисел из файла и вывод их суммы в консоль
-    int g = 0;
-    char c;
-    char* nums = (char*)malloc(100);
-    while ((c = getc(file)) != EOF)
-    {
-        arr[i] = c - 48;
-        ++g;
-    }
-    nums[g] = '\0';
+
 
     // закрытие файла
 
