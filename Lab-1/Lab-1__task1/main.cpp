@@ -1,21 +1,9 @@
-﻿#include <stdio.h>
-#include <stdlib.h>
-#include <locale>
-
-/* В-7
- * 1. С клавиатуры заполнить файл целыми числами.*/
-
-int hasLetters(char* str) {
-    for (int i = 0; str[i] != '\0'; ++i)
-        if (!('0' <= str[i] && str[i] <= '9' || str[i] == ' '))
-            return 1;
-    return 0;
-}
+﻿#include "tasks.h"
 
 int main(int argc, char* argv[])
 {
     setlocale(LC_ALL, "ru");
-    // создание и открытие файла
+    // создание файла
     errno_t err;
     FILE* file;
     err = fopen_s(&file, argv[1], "w");
@@ -23,27 +11,17 @@ int main(int argc, char* argv[])
         printf("Error\n");
         return 1;
     }
-    // запись строки целых чисел в файл
-    int length = 100;
-    char* message = (char*)malloc(length);
-    printf("Enter integer numbers: ");
-    gets_s(message, length);
-    if (hasLetters(message)) {
-        printf("Error! Letters are not allowed\n");
-        return 1;
-    }
-    fflush(stdin);
 
-    for (int i = 0; message[i] != '\0'; i++)
-    {
-        putc(message[i], file);
-    }
+    // задача1: ввод чисел в файл
+    task1(file);
+    // задача2: вывод суммы четных чисел
+    task2(file);
+    // задача3: Удалить все чётные числа.
+    task3(file);
+    // задача4: Отсортировать только числа большие заданного по убыванию
+    task4(file);
 
-    printf("\nFile has been written\n\n");
-
-    //// вывод содержимого файла обратно в консоль
-
-    // переоткрытие файла с режимом на чтение
+    // вывод файла в консоль
     fclose(file);
     err = fopen_s(&file, argv[1], "r");
 
@@ -54,5 +32,7 @@ int main(int argc, char* argv[])
         printf("%c", c);
     }
     printf("\n");
+
+    // закрытие файла
     fclose(file);
 }
