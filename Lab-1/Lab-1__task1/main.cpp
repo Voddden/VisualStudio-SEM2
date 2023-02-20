@@ -1,22 +1,53 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
-
+#include <string.h>
 #include "tasks.h"
+void check(FILE* fp) {
+    if (fp == NULL) {
+        printf("Null pointer error\n");
+        exit(1);
+    }
+}
+
+void write(FILE* fp, const char* str) {
+    int length = 100;
+    char* message = (char*)malloc(length);
+    //printf("Enter integer numbers: ");
+    //gets_s(message, length);
+    strcpy(message, "12345");
+    if (hasLetters(message)) {
+        printf("Error! Letters are not allowed\n");
+        exit(0);
+    }
+    fflush(stdin);
+
+    for (int i = 0; message[i] != '\0'; i++)
+    {
+        putc(message[i], fp);
+    }
+
+    printf("\nFile has been written\n\n");
+}
+
 
 int main(int argc, char* argv[])
 {
     setlocale(LC_ALL, "ru");
     // создание файла
     
-    //FILE* file;
-    //errno_t err = fopen_s(&file, argv[1], "w");
-    FILE* file = fopen(argv[1], "w");
-    if (file == NULL) {
-        printf("Error\n");
-        return 1;
-    }
+    FILE* file = fopen(argv[1], "r");
+    check(file);
+
+    //char* Default = (char*)malloc(100);
+    //strcpy(Default, "13 202 912 11");
+    //fflush(stdin);
+    //for (int i = 0; Default[i] != '\0'; i++)
+    //{
+    //    putc(Default[i], file);
+    //}
+    //write(file, "12345");
 
     //// вывод изначального файла в консоль:
-    //err = freopen_s(&file, argv[1], "r", file);
+    //file = freopen(argv[1], "r", file);
     printf("Файл по умолчанию: ");
     char c;
     while ((c = getc(file)) != EOF)
@@ -26,7 +57,7 @@ int main(int argc, char* argv[])
     printf("\n");
 
     //// работа с файлом:
-   // err = freopen_s(&file, argv[1], "w", file);
+    //file = freopen(argv[1], "w", file);
     // задача1: С клавиатуры заполнить файл целыми числами
     //task1(file);
     // задача2: Подсчитать сумму чётных чисел
@@ -38,8 +69,8 @@ int main(int argc, char* argv[])
     ////
     
     // вывод преобразованного файла в консоль:
-    //err = freopen_s(&file, argv[1], "r", file);
-    printf("Файл после преобразования: ");
+    //file = freopen(argv[1], "r", file);
+    printf("Файл после вызова функций: ");
     char ch;
     while ((ch = getc(file)) != EOF)
     {
