@@ -1,50 +1,52 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include <string.h>
 #include "tasks.h"
-void check(FILE* fp) {
+
+char filename[100];
+
+void checkF(FILE* fp) {
     if (fp == NULL) {
         printf("Null pointer error\n");
         exit(1);
     }
 }
 
-int main(int argc, char* argv[])
-{
-    setlocale(LC_ALL, "ru");
-    // создание файла
-    FILE* file = fopen(argv[1], "r");
-    check(file);
-
-    //// вывод изначального файла в консоль
-    printf("Файл по умолчанию: ");
+void printFile(FILE* fp) {
+    fp = freopen(filename, "r", fp);
     char c;
-    while ((c = getc(file)) != EOF)
+    while ((c = getc(fp)) != EOF)
     {
         printf("%c", c);
     }
     printf("\n");
+    fseek(fp, 0, SEEK_SET);
+}
+
+int main(int argc, char* argv[])
+{
+    strcpy(filename, argv[1]);
+    setlocale(LC_ALL, "ru");
+    // создание файла
+    FILE* fp = fopen(argv[1], "w");
+    checkF(fp);
+    fputs("14 59 7", fp); // значения по умолчанию
+
+    //// вывод изначального файла в консоль
+    printf("Файл по умолчанию: ");
+    printFile(fp);
+
+    fclose(fp);
 
     //// работа с файлом:
-    file = freopen(argv[1], "w", file);
     // задача1: С клавиатуры заполнить файл целыми числами
-    task1(file);
+    task1(fp, argv[1]);
     // задача2: Подсчитать сумму чётных чисел
-    task2(file);
+    //task2(fp, argv[1]);
     // задача3: Удалить все чётные числа
-    //task3(file);
+    //task3(fp, argv[1]);
     // задача4: Отсортировать только числа большие заданного (по убыванию)
-    //task4(file);
+    //task4(fp, argv[1]);
     ////
     
-    // вывод преобразованного файла в консоль:
-    file = freopen(argv[1], "r", file);
-    printf("Файл после вызова функций: ");
-    char ch;
-    while ((ch = getc(file)) != EOF)
-    {
-        printf("%c", ch);
-    }
-    printf("\n");
-
-    fclose(file);
+    
 }

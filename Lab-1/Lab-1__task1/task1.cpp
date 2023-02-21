@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "tasks.h"
 
 /* Â-7
@@ -10,7 +11,9 @@ int hasLetters(char* str) {
     return 0;
 }
 
-void task1(FILE* file) {
+void task1(FILE* fp, char* filename) {
+    fp = fopen(filename, "w");
+
     int length = 100;
     char* message = (char*)malloc(length);
     printf("Enter integer numbers: ");
@@ -23,10 +26,10 @@ void task1(FILE* file) {
 
     for (int i = 0; message[i] != '\0'; i++)
     {
-        putc(message[i], file);
+        putc(message[i], fp);
     }
 
     printf("\nFile has been written\n\n");
 
-
+    fclose(fp);
 }
