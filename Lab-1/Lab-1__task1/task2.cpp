@@ -5,30 +5,29 @@
 2. Посчитать сумму чётных чисел.
 */
 
-int numberCount(FILE* input) {
-	fseek(input, 0, SEEK_SET);
-	int counter = 0;
-	while (true) {
-		int value;
-		if (fscanf(input, "%d", &value) == 1)
-			counter++;
-		if (feof(input))
-			break;
-	}
-	return counter;
-}
+int arrLength(FILE* fp) {
+	int size = 0, y;
 
-void read_numbers(FILE* input, int size, int* numbers) {
-	fseek(input, 0, SEEK_SET);
-	for (int i = 0; i < size; ++i) {
-		fscanf(input, "%d", &numbers[i]);
+	while (!feof(fp))
+	{
+		int z = fscanf(fp, "%d", &y);
+		if (!z)
+			continue;
+		size++;
 	}
+	return size;
 }
 
 void task2(FILE* fp) {
+	int size = arrLength(fp);
+	int* arr = (int*)calloc(size, sizeof(int));
 
-	int length = numberCount(fp);
-	int* arr = (int*)malloc(length*sizeof(int));
-	read_numbers(fp, length, arr);
+	rewind(fp);
 
+	for (int i = 0; i < size; i++)
+		fscanf(fp, "%d", &arr[i]);
+
+	for (int i = 0; i < size; ++i) {
+		printf("%d ", arr[i]);
+	}
 }
