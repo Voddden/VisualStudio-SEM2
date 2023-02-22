@@ -6,7 +6,7 @@
 */
 
 void printFile1(FILE* fp, char* filename) {
-	fp = freopen(filename, "r", fp);
+	fp = freopen(filename, "rb", fp);
 	char c;
 	while ((c = getc(fp)) != EOF)
 	{
@@ -27,7 +27,7 @@ int numOdd(const int* arr, const int length) {
 }
 
 void task3(FILE* fp, char* filename) {
-	fp = fopen(filename, "r");
+	fp = fopen(filename, "rb");
 
 	int length = countNumbers(fp);
 
@@ -50,7 +50,7 @@ void task3(FILE* fp, char* filename) {
 		}
 	}
 
-	fp = fopen(filename, "w");
+	fp = fopen(filename, "wb");
 
 	for (int i = 0; i < length1; ++i) {
 		fprintf(fp, "%d", arr1[i]);

@@ -27,7 +27,7 @@ bool inputIsInvalid(char* str) {
 }
 
 void task1(FILE* fp, char* filename) {
-    fp = fopen(filename, "w");
+    fp = fopen(filename, "wb");
 
 
     int length = 100;

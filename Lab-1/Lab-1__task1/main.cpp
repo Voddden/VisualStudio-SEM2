@@ -12,7 +12,7 @@ void checkF(FILE* fp) {
 }
 
 void printFile(FILE* fp) {
-    fp = freopen(filename, "r", fp);
+    fp = freopen(filename, "rb", fp);
     char c;
     while ((c = getc(fp)) != EOF)
     {
@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
     strcpy(filename, argv[1]);
     setlocale(LC_ALL, "ru");
     // создание файла
-    FILE* fp = fopen(argv[1], "w");
+    FILE* fp = fopen(argv[1], "wb");
     checkF(fp);
     fputs("1 -14 0 3 -59 7 0", fp); // значения по умолчанию
 

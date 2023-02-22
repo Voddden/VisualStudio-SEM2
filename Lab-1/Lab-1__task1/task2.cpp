@@ -6,7 +6,7 @@
 */
 
 void task2(FILE* fp, char* filename) {
-	fp = fopen(filename, "r");
+	fp = fopen(filename, "rb");
 
 	int length = countNumbers(fp);
 

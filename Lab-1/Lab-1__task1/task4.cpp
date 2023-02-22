@@ -7,7 +7,7 @@
 */
 
 void printFile2(FILE* fp, char* filename) {
-	fp = freopen(filename, "r", fp);
+	fp = freopen(filename, "rb", fp);
 	char c;
 	while ((c = getc(fp)) != EOF)
 	{
@@ -27,7 +27,7 @@ int numOfGreaterThanInput(int* arr, int size, int input) {
 }
 
 void task4(FILE* fp, char* filename) {
-	fp = fopen(filename, "r");
+	fp = fopen(filename, "rb");
 
 	int length = countNumbers(fp);
 
@@ -65,7 +65,7 @@ void task4(FILE* fp, char* filename) {
 		}
 	}
 
-	fp = fopen(filename, "w");
+	fp = fopen(filename, "wb");
 	for (int i = 0; i < length; ++i) {
 		fprintf(fp, "%d ", arr[i]);
 	}
