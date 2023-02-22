@@ -10,28 +10,19 @@ void checkF(FILE* fp) {
     }
 }
 
-void printFile(FILE* fp) {
-    fp = freopen(filename, "rb", fp);
-    char c;
-    while ((c = getc(fp)) != EOF)
-    {
-        printf("%c", c);
-    }
-    printf("\n");
-    fseek(fp, 0, SEEK_SET);
-}
+
 
 void main(int argc, char* argv[]) {
     strcpy(filename, argv[1]);
     setlocale(LC_ALL, "ru");
     // создание файла
-    FILE* fp = fopen(argv[1], "wb");
+    FILE* fp = fopen(argv[1], "w");
     checkF(fp);
     fputs("1 -14 0 3 -59 7 0", fp); // значения по умолчанию
 
     //// вывод изначального файла в консоль
     printf("Файл по умолчанию: ");
-    printFile(fp);
+    printFile(fp, filename);
 
     fclose(fp);
 
@@ -40,9 +31,9 @@ void main(int argc, char* argv[]) {
     // задача1: С клавиатуры заполнить файл числами. Вывести содержимое файла на экран
     task1(fp, argv[1]);
     // задача2: Определить максимальное число, записанное в файле (если таких чисел несколько, вывести все).
-    task2(fp, argv[1]); printf("\n");
+    //task2(fp, argv[1]); printf("\n");
     // задача3: Перевернуть в файле число, номер которого задан с клавиатуры.
-    task3(fp, argv[1]);
+    //task3(fp, argv[1]);
     ////
 
     puts("\n");

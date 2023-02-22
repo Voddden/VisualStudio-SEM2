@@ -27,9 +27,21 @@
     <ClCompile Include="task3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="printFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="countNumbers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tasks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="countNumbers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="printFile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

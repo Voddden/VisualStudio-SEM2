@@ -1,7 +1,9 @@
-#pragma once
+﻿#pragma once
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale>
+#include "countNumbers.h"
+#include "printFile.h"
 
 void task1(FILE* fp, char* filename);
 void task2(FILE* fp, char* filename);
