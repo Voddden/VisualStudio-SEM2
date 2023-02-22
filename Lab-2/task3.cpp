@@ -5,19 +5,41 @@
 3. Перевернуть в файле число, номер которого задан с клавиатуры.
 */
 
-int number_digits(int n)
-{
+int number_digits(int n) {
 	int count = 0;
 	while (n) {
 		n /= 10;
 		count++;
 	}
-
 	return count;
 }
 
-void flip(int num, char* res) {
-	
+int integrateDigitsToNumber(int* arr, int length) {
+	int res = 0;
+	int razryad = length - 1;
+	for (int i = 0; i < length; ++i) {
+		res += arr[i] * Pow(10, razryad);
+		--razryad;
+	}
+	return res;
+}
+
+int flip(int num) {
+	int res;
+	int length = number_digits(num);
+	int* arr = (int*)malloc(length * sizeof(int));
+
+	int i = 0;
+	while (num != 0) {
+		res = num % 10;
+		num = num / 10;
+		arr[i] = res;
+		++i;
+	}
+
+	res = integrateDigitsToNumber(arr, length);
+
+	return res;
 }
 
 void task3(FILE* fp, char* filename) {
@@ -33,27 +55,14 @@ void task3(FILE* fp, char* filename) {
 
 	int n = inputNatural("Введите номер числа для переворота: ");
 
-	//arr[n - 1] = flip(arr[n - 1]);
-
-	char flipRes[100];
-	flip(arr[n-1], flipRes);
-	int numDigits = number_digits(arr[n - 1]);
-	flipRes[numDigits] = '\0';
+	arr[n - 1] = flip(arr[n - 1]);
 
 	fp = fopen(filename, "w");
 	for (int i = 0; i < length; ++i) {
-		if (i == n - 1) {
-			//fprintf(fp, "%s", flipRes);
-			for (int j = 0; j < numDigits; ++j) {
-				putc(flipRes[j] + 48, fp);
-				//putc(' ', fp);
-			}
-			continue;
-		}
 		fprintf(fp, "%d ", arr[i]);
 	}
 	fclose(fp);
 
-	printf("Переверот %d-го числа в файле: ", n);
+	printf("task3 - Переворот %d-го числа в файле: ", n);
 	printFile(fp, filename);
 }
