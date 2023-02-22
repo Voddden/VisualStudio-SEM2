@@ -6,13 +6,22 @@
 
 bool inputIsInvalid(char* str) {
     for (int i = 0; str[i] != '\0'; ++i)
-        if (!('0' <= str[i] && str[i] <= '9' || str[i] == ' ' || str[i] == '\n'))
+        if (!('0' <= str[i] && str[i] <= '9' || str[i] == ' ' || str[i] == '\n' || str[i] == '-'))
             return true;
 
     for (int i = 1; str[i] != '\0'; ++i) {
-        if (str[i] == ' ' && str[i - 1] == ' ' || str[i] == '\n' && str[i-1] == '\n')
+        if (str[i] == ' ' && str[i - 1] == ' ' || str[i] == '\n' && str[i-1] == '\n' || str[i] == '-' && str[i-1] == '-')
             return true;
     }
+
+    int f = 0;
+    for (int i = 0; str[i] != '\0'; ++i) {
+        
+        if (str[i] == ' ')
+            ++f;
+    }
+    if (f == 0)
+        return true;
 
     return false;
 }
