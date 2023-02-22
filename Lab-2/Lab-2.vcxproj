@@ -24,6 +24,7 @@
     <ProjectGuid>{f9d96dab-bc24-4fd7-93c3-95ba22de7203}</ProjectGuid>
     <RootNamespace>Lab2</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Lab-2(Variant8)</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -128,6 +129,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="task1.cpp" />
+    <ClCompile Include="task2.cpp" />
+    <ClCompile Include="task3.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="tasks.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
