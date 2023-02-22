@@ -128,14 +128,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="countNumbers.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="task1.cpp" />
     <ClCompile Include="task2.cpp" />
     <ClCompile Include="task3.cpp" />
     <ClCompile Include="task4.cpp" />
+    <ClCompile Include="Validation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tasks.h" />
+    <ClInclude Include="Validation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

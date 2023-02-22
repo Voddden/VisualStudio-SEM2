@@ -5,18 +5,6 @@
 2. Посчитать сумму чётных чисел.
 */
 
-int countNumbers(FILE* fp) {
-	fseek(fp, 0, SEEK_SET);
-	char c;
-	int res = 0;
-	while ((c = getc(fp)) != EOF) {
-		if (c == ' ' || c == '\n')
-			++res;
-	}
-	fseek(fp, 0, SEEK_SET);
-	return (res + 1);
-}
-
 void task2(FILE* fp, char* filename) {
 	fp = fopen(filename, "r");
 
@@ -33,7 +21,7 @@ void task2(FILE* fp, char* filename) {
 			sum += arr[i];
 		}
 	}
-	printf("task2: сумма = %d", sum);
+	printf("task2 - сумма чётных = %d", sum);
 	
 	fclose(fp);
 }
