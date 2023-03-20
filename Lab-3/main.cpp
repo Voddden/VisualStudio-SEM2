@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /*
 13) Пейнтбол. Содержится информация об оборудовании для игр — id, название, тип,
@@ -15,19 +16,39 @@
 2.Добавить перечисление и одновременную сортировку по нескольким параметрам
 */
 
-struct Paintball {
-	char id[50];
-	char name[50];
-	char type[50];
-	int quantity;
-	char date[50];
+struct Equipment {
+	unsigned long long id = 0;
+	char name[50] = "blank";
+	char type[50] = "blank";
+	int quantity = 0;
+	char date[50] = "blank";
 };
 
-void constructor(Paintball paintball, int _id, char* _name, char* _type, int _quantity, char* _date) {
-	Paintball.id 
+void Print(Equipment equipment) {
+	printf("id = %ld\nname = %s\ntype = %s\nquantity = %d\ndate = %s\n",
+		equipment.id, equipment.name, equipment.type, equipment.quantity, equipment.date);
+}
+
+bool availableInSorage(Equipment equipment) {
+	return equipment.quantity;
+}
+
+void input(Equipment equipment) {
+
 }
 
 void main() {
-	printf("Hello world");
+	Equipment arr[100];
+
+	arr[0]{24655, "ChillZone", "Important", 10, "02/05/2022"};
+	//input(equipment);
+	//if (availableInSorage(equipment)) {
+	//	printf("equipment is available\n");
+	//}
+	//else {
+	//	printf("equipment isn't available\n");
+	//}
+	
+
 
 }
