@@ -134,8 +134,8 @@
     <ClInclude Include="availabilityInSorage.h" />
     <ClInclude Include="EquipmentType.h" />
     <ClInclude Include="inputEquipment.h" />
-    <ClInclude Include="printEquipment.h" />
-    <ClInclude Include="Push.h" />
+    <ClInclude Include="print.h" />
+    <ClInclude Include="add.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

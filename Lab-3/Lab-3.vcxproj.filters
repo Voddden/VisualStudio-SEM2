@@ -29,13 +29,13 @@
     <ClInclude Include="EquipmentType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="printEquipment.h">
+    <ClInclude Include="print.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="availabilityInSorage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Push.h">
+    <ClInclude Include="add.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
