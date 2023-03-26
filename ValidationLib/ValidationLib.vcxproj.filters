@@ -15,60 +15,39 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="inputReal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="scan-printEquipment.cpp">
+    <ClCompile Include="inputNatural.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="addEquipment.cpp">
+    <ClCompile Include="inputRealPositive.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="availabilityInStorage.cpp">
+    <ClCompile Include="inputInteger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="editEquipment.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="deleteEquipment.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="sortEquipment.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="swapEquipment.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Validation.cpp">
+    <ClCompile Include="inputNaturalAnd0.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EquipmentType.h">
+    <ClInclude Include="inputNatural.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="scan-printEquipment.h">
+    <ClInclude Include="inputReal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="availabilityInSorage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="addEquipment.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="editEquipment.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="deleteEquipment.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="sortEquipment.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="swapEquipment.h">
+    <ClInclude Include="inputRealPositive.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Validation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inputInteger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inputNaturalAnd0.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

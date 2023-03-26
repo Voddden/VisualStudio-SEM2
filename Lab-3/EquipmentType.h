@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <string.h>
 
-
 struct Equipment {
 	unsigned long long id = 0;
 	char name[50] = "blank";

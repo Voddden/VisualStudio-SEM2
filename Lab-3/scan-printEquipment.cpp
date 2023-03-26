@@ -1,6 +1,48 @@
-#include "inputEquipment.h"
+#define _CRT_SECURE_NO_WARNINGS
 #include "EquipmentType.h"
+#include "..\ValidationLib\Validation.h"
 
-void inputEquipment(Equipment equipment) {
+bool invalidDate(char* str) { // ÄÄ.ÌÌ.ÃÃÃÃ
+	char s[100];
+	strcpy(s, str);
+	s[0] = 'Ä'; s[1] = 'Ä'; 
+	s[3] = 'Ì'; s[4] = 'Ì'; 
+	s[6] = 'Ã'; s[7] = 'Ã'; s[8] = 'Ã'; s[9] = 'Ã';
+	int res = strcmp(str, s);
+	if (res != 0)
+		return true;
+	else
+		return false;
+}
 
+void scanEquipment(Equipment* stack, int size) {
+	for (int i = 0; i < size; ++i) {
+		printf("list[%d].id = ", i); stack[i].id = inputInteger("");
+		printf("list[%d].name = ", i); scanf("%s", &stack[i].name);
+		printf("list[%d].type = ", i); scanf("%s", &stack[i].type);
+		printf("list[%d].quantity = ", i); stack[i].quantity = inputNaturalAnd0("");
+
+		printf("list[%d].date = ", i); 
+		scanf("%s", &stack[i].date);
+		while(invalidDate(stack[i].date)) {
+			printf("Error. Try again\n");
+			scanf("%s", &stack[i].date);
+		}
+	}
+
+
+}
+
+void printEquipment(Equipment equipment) {
+	printf("id = %ld\nname = %s\ntype = %s\nquantity = %d\ndate = %s\n",
+		equipment.id, equipment.name, equipment.type, equipment.quantity, equipment.date);
+}
+
+void printList(Equipment* list, const int size) {
+	puts("Full stack printing:");
+	for (int i = 0; i < size; ++i) {
+		printf("=============== list[%d]\n", i);
+		printEquipment(list[i]);
+		puts("===============");
+	}
 }
