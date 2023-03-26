@@ -1,28 +1,28 @@
 #include "daysInMonth.h"
 
 int daysInMonth(int month) {
-	if (month == 1)
+	if (month == (int)Months::January)
 		return 31;
-	if (month == 2)
-		return 29;
-	if (month == 3)
+	if (month == (int)Months::February)
+		return 28;
+	if (month == (int)Months::March)
 		return 31;
-	if (month == 4)
+	if (month == (int)Months::April)
 		return 30;
-	if (month == 5)
+	if (month == (int)Months::May)
 		return 31;
-	if (month == 6)
+	if (month == (int)Months::June)
 		return 30;
-	if (month == 7)
+	if (month == (int)Months::July)
 		return 31;
-	if (month == 8)
+	if (month == (int)Months::August)
 		return 31;
-	if (month == 9)
+	if (month == (int)Months::September)
 		return 30;
-	if (month == 10)
+	if (month == (int)Months::October)
 		return 31;
-	if (month == 11)
+	if (month == (int)Months::November)
 		return 30;
-	if (month == 12)
+	if (month == (int)Months::December)
 		return 31;
 }

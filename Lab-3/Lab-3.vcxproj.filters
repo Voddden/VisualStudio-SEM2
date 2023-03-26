@@ -45,6 +45,9 @@
     <ClCompile Include="daysInMonth.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="hasInventory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EquipmentType.h">
@@ -75,6 +78,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="daysInMonth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hasInventory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
