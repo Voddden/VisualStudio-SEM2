@@ -17,19 +17,36 @@ bool invalidDate(char* str) { // ДД.ММ.ГГГГ
 	return false;
 }
 
-void scanEquipment(Equipment e, int i) {
-	printf("list[%d].id = ", i); e.id = inputInteger("");
-	printf("list[%d].name = ", i); scanf("%s", &e.name);
-	printf("list[%d].type = ", i); scanf("%s", &e.type);
+void scanEquipment(Equipment& e, int i) {
+	printf("list[%d].id = ", i); e.id = inputInteger(""); 
+	printf("list[%d].name = ", i); gets_s(e.name, 100);
+	printf("list[%d].type = ", i); gets_s(e.type, 100);
 	printf("list[%d].quantity = ", i); e.quantity = inputNaturalAnd0("");
 
-	printf("list[%d].date = ", i);
-	scanf("%s", &e.date);
+	printf("формат: ДД.ММ.ГГГ\nlist[%d].date = ", i);
+	gets_s(e.date, 100);
 	while (invalidDate(e.date)) {
 		printf("Error. Try again\n");
 
-		printf("list[%d].date = ", i);
-		scanf("%s", &e.date);
+		printf("формат: ДД.ММ.ГГГ\nlist[%d].date = ", i);
+		gets_s(e.date, 100);
+	}
+	fflush(stdin);
+	rewind(stdin);
+}
+
+void inputGeneral(Equipment* list, int& size) {
+	printf("Введите массив структур:\n");
+	int g = 0;
+	for (int i = 0; i < 100; ++i) {
+		scanEquipment(list[i], i); ++size;
+		g = inputNatural("1 - продолжить, 2 - завершить ввод\n");
+		while (g != 1 && g != 2) {
+			printf("Error! Try again\n");
+			g = inputNatural("1 - продолжить, 2 - завершить ввод\n");
+		}
+		if (g == 2)
+			break;
 	}
 }
 
@@ -55,7 +72,7 @@ void printEquipment(Equipment equipment) {
 }
 
 void printList(Equipment* list, const int size) {
-	puts("Full stack printing:");
+	puts("Full list printing:");
 	for (int i = 0; i < size; ++i) {
 		printf("=============== list[%d]\n", i);
 		printEquipment(list[i]);

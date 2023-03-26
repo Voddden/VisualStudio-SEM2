@@ -35,27 +35,13 @@ void main() {
 	//add(list, size, 5, "Bwatergun", "very splashy", 10, "25/1/2023");
 	//add(list, size, 10, "Cshovel", "pocket edition", 3, "21/3/2022");
 	
-	printf("¬ведите массив структур:\n");
-	int g = 0;
-	for (int i = 0; i < 100; ++i) {
-		scanEquipment(list[i], i);
-		g = inputNatural("1 - продолжить, 2 - завершить ввод");
-		while (g != 1 && g != 2) {
-			printf("Error! Try again\n");
-			g = inputNatural("1 - продолжить, 2 - завершить ввод");
-		}
-		if (g == 2)
-			break;
-	}
-	
-
-	
+	inputGeneral(list, size);
 
 	//editEquipment(list, size, 1, 228, "toy tank", "expensive", 9, "20/2/2023");
 
 	//deleteEquipment(list, size, 0);
 
-	sortByName(list, size);
+	//sortByName(list, size);
 
 	printList(list, size);
 
