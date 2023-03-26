@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <locale>
 
 struct Equipment {
 	unsigned long long id = 0;

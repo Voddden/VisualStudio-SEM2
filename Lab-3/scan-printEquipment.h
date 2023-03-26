@@ -3,7 +3,9 @@
 
 bool invalidDate(char* str);
 
-void scanEquipment(Equipment* stack, int size);
+void scanEquipment(Equipment e, int i);
+
+void scanList(Equipment* stack, int& size);
 
 void printEquipment(Equipment equipment);
 

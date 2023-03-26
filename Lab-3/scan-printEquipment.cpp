@@ -3,24 +3,42 @@
 #include "..\ValidationLib\Validation.h"
 
 bool invalidDate(char* str) { // ฤฤ.ฬฬ.รรรร
-	char s[100];
+	char valid[] = "ฤฤ.ฬฬ.รรรร";
+
+	char s[100] = {};
 	strcpy(s, str);
 	s[0] = 'ฤ'; s[1] = 'ฤ'; 
 	s[3] = 'ฬ'; s[4] = 'ฬ'; 
 	s[6] = 'ร'; s[7] = 'ร'; s[8] = 'ร'; s[9] = 'ร';
-	int res = strcmp(str, s);
-	if (res != 0)
-		return true;
-	else
-		return false;
+	for (int i = 0; i <= 10; ++i) {
+		if (s[i] != valid[i])
+			return true;
+	}
+	return false;
 }
 
-void scanEquipment(Equipment* stack, int size) {
+void scanEquipment(Equipment e, int i) {
+	printf("list[%d].id = ", i); e.id = inputInteger("");
+	printf("list[%d].name = ", i); scanf("%s", &e.name);
+	printf("list[%d].type = ", i); scanf("%s", &e.type);
+	printf("list[%d].quantity = ", i); e.quantity = inputNaturalAnd0("");
+
+	printf("list[%d].date = ", i);
+	scanf("%s", &e.date);
+	while (invalidDate(e.date)) {
+		printf("Error. Try again\n");
+
+		printf("list[%d].date = ", i);
+		scanf("%s", &e.date);
+	}
+}
+
+void scanList(Equipment* stack, int& size) {
 	for (int i = 0; i < size; ++i) {
-		printf("list[%d].id = ", i); stack[i].id = inputInteger("");
+		printf("list[%d].id = ", i); stack[i].id = inputInteger("1");
 		printf("list[%d].name = ", i); scanf("%s", &stack[i].name);
 		printf("list[%d].type = ", i); scanf("%s", &stack[i].type);
-		printf("list[%d].quantity = ", i); stack[i].quantity = inputNaturalAnd0("");
+		printf("list[%d].quantity = ", i); stack[i].quantity = inputNaturalAnd0("1");
 
 		printf("list[%d].date = ", i); 
 		scanf("%s", &stack[i].date);
@@ -29,8 +47,6 @@ void scanEquipment(Equipment* stack, int size) {
 			scanf("%s", &stack[i].date);
 		}
 	}
-
-
 }
 
 void printEquipment(Equipment equipment) {
