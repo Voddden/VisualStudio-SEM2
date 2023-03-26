@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClCompile Include="addEquipment.cpp" />
     <ClCompile Include="availabilityInStorage.cpp" />
+    <ClCompile Include="daysInMonth.cpp" />
     <ClCompile Include="deleteEquipment.cpp" />
     <ClCompile Include="editEquipment.cpp" />
     <ClCompile Include="scan-printEquipment.cpp" />
@@ -142,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="availabilityInSorage.h" />
+    <ClInclude Include="daysInMonth.h" />
     <ClInclude Include="deleteEquipment.h" />
     <ClInclude Include="editEquipment.h" />
     <ClInclude Include="EquipmentType.h" />

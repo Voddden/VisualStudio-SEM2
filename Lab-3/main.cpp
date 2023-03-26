@@ -31,9 +31,9 @@ void main() {
 	setlocale(LC_ALL, "ru");
 	Equipment list[100] = {}; int size = 0;
 
-	//add(list, size, 100, "Agun", "lasertype", 4, "02/06/2004");
-	//add(list, size, 5, "Bwatergun", "very splashy", 10, "25/1/2023");
-	//add(list, size, 10, "Cshovel", "pocket edition", 3, "21/3/2022");
+	//add(list, size, 100, "gun", "lasertype", 4, "02/06/2004");
+	//add(list, size, 5, "watergun", "very splashy", 10, "25/1/2023");
+	//add(list, size, 10, "shovel", "pocket edition", 3, "21/3/2022");
 	
 	inputGeneral(list, size);
 

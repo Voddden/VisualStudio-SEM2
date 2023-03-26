@@ -4,3 +4,5 @@
 #include <locale.h>
 #include <time.h>
 double inputReal(const char* prompt);
+
+double Pow(long num, long deg);

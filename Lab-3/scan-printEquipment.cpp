@@ -1,14 +1,15 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "EquipmentType.h"
 #include "..\ValidationLib\Validation.h"
+#include "daysInMonth.h"
 
-bool invalidDate(char* str) { // ÄÄ.ÌÌ.ÃÃÃÃ
+bool test1(const char* str) {
 	char valid[] = "ÄÄ.ÌÌ.ÃÃÃÃ";
 
 	char s[100] = {};
 	strcpy(s, str);
-	s[0] = 'Ä'; s[1] = 'Ä'; 
-	s[3] = 'Ì'; s[4] = 'Ì'; 
+	s[0] = 'Ä'; s[1] = 'Ä';
+	s[3] = 'Ì'; s[4] = 'Ì';
 	s[6] = 'Ã'; s[7] = 'Ã'; s[8] = 'Ã'; s[9] = 'Ã';
 	for (int i = 0; i <= 10; ++i) {
 		if (s[i] != valid[i])
@@ -17,13 +18,61 @@ bool invalidDate(char* str) { // ÄÄ.ÌÌ.ÃÃÃÃ
 	return false;
 }
 
+bool test2(const char* str) {
+	for (int i = 0; i < 10; ++i) {
+		if (i == 2 || i == 5)
+			continue;
+		if (!isdigit(str[i]))
+			return true;
+	}
+	return false;
+}
+
+bool test3(const char* str) {
+	if (str[2] != '.' || str[5] != '.')
+		return true;
+	else
+		return false;
+}
+
+bool test4(const char* str) {
+	int day = 0, month = 0, year = 0;
+	day += ((int)str[0] - 48) * 10;
+	day += ((int)str[1] - 48);
+
+	month += ((int)str[3] - 48) * 10;
+	month += (int)str[4] - 48;
+
+	//year += (int)str[6] - 48; year += ((int)str[7] - 48) * 10; year += ((int)str[8] - 48) * 100; year += ((int)str[9] - 48) * 1000;
+	//if (month == 2 && day > 29) return true;
+	//else if (month % 2 == 0 && day > 30) return true;
+	//if (month % 2 == 1 && day > 31) return true;
+
+
+	if (day > daysInMonth(month))
+		return true;
+
+
+	if (month > 12)
+		return true;
+
+	return false;
+}
+
+bool invalidDate(const char* str) { // ÄÄ.ÌÌ.ÃÃÃÃ
+	if (test1(str) || test2(str) || test3(str) || test4(str))
+		return true;
+	else
+		return false;
+}
+
 void scanEquipment(Equipment& e, int i) {
 	printf("list[%d].id = ", i); e.id = inputInteger(""); 
 	printf("list[%d].name = ", i); gets_s(e.name, 100);
 	printf("list[%d].type = ", i); gets_s(e.type, 100);
 	printf("list[%d].quantity = ", i); e.quantity = inputNaturalAnd0("");
 
-	printf("ôîğìàò: ÄÄ.ÌÌ.ÃÃÃ\nlist[%d].date = ", i);
+	printf("ôîğìàò: ÄÄ.ÌÌ.ÃÃÃÃ\nlist[%d].date = ", i);
 	gets_s(e.date, 100);
 	while (invalidDate(e.date)) {
 		printf("Error. Try again\n");
