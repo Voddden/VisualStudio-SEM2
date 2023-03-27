@@ -132,7 +132,7 @@
   <ItemGroup>
     <ClCompile Include="addEquipment.cpp" />
     <ClCompile Include="availabilityInStorage.cpp" />
-    <ClCompile Include="hasInventory.cpp" />
+    <ClCompile Include="partNameCheck.cpp" />
     <ClCompile Include="daysInMonth.cpp" />
     <ClCompile Include="deleteEquipment.cpp" />
     <ClCompile Include="editEquipment.cpp" />
@@ -144,7 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="availabilityInSorage.h" />
-    <ClInclude Include="hasInventory.h" />
+    <ClInclude Include="partNameCheck.h" />
     <ClInclude Include="daysInMonth.h" />
     <ClInclude Include="deleteEquipment.h" />
     <ClInclude Include="editEquipment.h" />

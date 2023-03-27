@@ -5,7 +5,7 @@
 #include "deleteEquipment.h"
 #include "sortEquipment.h"
 #include "..\ValidationLib\Validation.h"
-#include "hasInventory.h"
+#include "partNameCheck.h"
 
 /*
 13) Пейнтбол. Содержится информация об оборудовании для игр — 
@@ -39,14 +39,7 @@ void main()
 	add(list, size, 4, "computer", "Asus", 50, "01.03.1945");
 	add(list, size, 5, "lamp", "kinda cute", 6, "07.03.2023");
 
-	int index = 0;
-	if (index = hasInventory(list, size, "water")) {
-		printf("Оборудование с таким названием существует:\n");
-		printEquipment(list[index - 1]);
-	}
-	else {
-		printf("Такого оборудования в наличии нет\n");
-	}
+	partNameCheck(list, size);
 
 	//sortByDate(list, size);
 

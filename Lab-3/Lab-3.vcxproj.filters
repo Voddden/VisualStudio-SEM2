@@ -45,7 +45,7 @@
     <ClCompile Include="daysInMonth.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hasInventory.cpp">
+    <ClCompile Include="partNameCheck.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -80,7 +80,7 @@
     <ClInclude Include="daysInMonth.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="hasInventory.h">
+    <ClInclude Include="partNameCheck.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
