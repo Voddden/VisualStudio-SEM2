@@ -100,8 +100,10 @@ void inputGeneral(Equipment* list, int& size) {
 }
 
 void printEquipment(Equipment equipment) {
+	puts("===============");
 	printf("id = %ld\nname = %s\ntype = %s\nquantity = %d\ndate = %s\n",
 		equipment.id, equipment.name, equipment.type, equipment.quantity, equipment.date);
+	puts("===============");
 }
 
 void printList(Equipment* list, const int size) {

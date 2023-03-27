@@ -39,8 +39,10 @@ void main()
 	add(list, size, 4, "computer", "Asus", 50, "01.03.1945");
 	add(list, size, 5, "lamp", "kinda cute", 6, "07.03.2023");
 
-	if (hasInventory("water")) {
-
+	int index = 0;
+	if (index = hasInventory(list, size, "water")) {
+		printf("ќборудование с таким названием существует:\n");
+		printEquipment(list[index - 1]);
 	}
 	else {
 		printf("“акого оборудовани€ в наличии нет\n");
@@ -48,6 +50,6 @@ void main()
 
 	//sortByDate(list, size);
 
-	printList(list, size);
+	//printList(list, size);
 
 }

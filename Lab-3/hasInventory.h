@@ -1,4 +1,4 @@
 #pragma once
 #include "EquipmentType.h"
 
-bool hasInventory(const char* str);
+int hasInventory(Equipment* list, const int size, const char* partName);
