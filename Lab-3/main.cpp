@@ -39,7 +39,10 @@ void main()
 	add(list, size, 4, "computer", "Asus", 50, "01.03.1945");
 	add(list, size, 5, "lamp", "kinda cute", 6, "07.03.2023");
 
-	partNameCheck(list, size);
+	// "id", "name", "type", "quantity", "date"
+	//SORT(list, size, "")
+
+	//partNameCheck(list, size);
 
 	//sortByDate(list, size);
 
