@@ -27,15 +27,15 @@ int main(int argc, char* argv[])
     strcpy(filename, argv[1]);
     setlocale(LC_ALL, "ru");
     // создание файла
-    FILE* fp = fopen(argv[1], "wb");
+    FILE* fp = fopen(argv[1], "w");
     checkF(fp);
     fputs("1 -14 0 3 -59 7 0", fp); // значения по умолчанию
-
+    fclose(fp);
     //// вывод изначального файла в консоль
     printf("Файл по умолчанию: ");
     printFile(fp);
 
-    fclose(fp);
+    
 
     //// работа с файлом:
     // задача1: С клавиатуры заполнить файл целыми числами

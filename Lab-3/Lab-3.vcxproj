@@ -144,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="availabilityInSorage.h" />
+    <ClInclude Include="Lab3.h" />
     <ClInclude Include="partNameCheck.h" />
     <ClInclude Include="daysInMonth.h" />
     <ClInclude Include="deleteEquipment.h" />

@@ -30,6 +30,7 @@ id,
 
 void main() 
 {
+	// "id", "name", "type", "quantity", "date"
 	setlocale(LC_ALL, "ru");
 	Equipment list[100] = {}; int size = 0;
 
@@ -39,13 +40,18 @@ void main()
 	add(list, size, 4, "computer", "Asus", 50, "01.03.1945");
 	add(list, size, 5, "lamp", "kinda cute", 6, "07.03.2023");
 
-	// "id", "name", "type", "quantity", "date"
-	//SORT(list, size, "")
+	editEquipment(list, size, 2, 10, "supergun", "incredible", 15, "03.08.2015");
 
-	//partNameCheck(list, size);
+	printf("Список по умолчанию:\n");
+	printList(list, size);
 
+
+
+	sortById(list, size);
+	//sortByName(list, size);
+	//sortByType(list, size);
+	//sortByQuantity(list, size);
 	//sortByDate(list, size);
 
-	//printList(list, size);
-
+	partNameCheck(list, size);
 }

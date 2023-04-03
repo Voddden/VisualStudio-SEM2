@@ -110,7 +110,9 @@ void printList(Equipment* list, const int size) {
 	puts("Full list printing:");
 	for (int i = 0; i < size; ++i) {
 		printf("=============== list[%d]\n", i);
-		printEquipment(list[i]);
-		puts("===============");
+		printf("id = %ld\nname = %s\ntype = %s\nquantity = %d\ndate = %s\n",
+			list[i].id, list[i].name, list[i].type, list[i].quantity, list[i].date);
+		//puts("===============");
 	}
+	puts("===============");
 }

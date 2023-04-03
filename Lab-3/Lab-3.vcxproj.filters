@@ -83,5 +83,8 @@
     <ClInclude Include="partNameCheck.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Lab3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
