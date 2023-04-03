@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClCompile Include="addEquipment.cpp" />
     <ClCompile Include="availabilityInStorage.cpp" />
+    <ClCompile Include="complexSort.cpp" />
     <ClCompile Include="partNameCheck.cpp" />
     <ClCompile Include="daysInMonth.cpp" />
     <ClCompile Include="deleteEquipment.cpp" />
@@ -144,6 +145,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="availabilityInSorage.h" />
+    <ClInclude Include="complexSort.h" />
     <ClInclude Include="Lab3.h" />
     <ClInclude Include="partNameCheck.h" />
     <ClInclude Include="daysInMonth.h" />

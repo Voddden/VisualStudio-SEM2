@@ -48,6 +48,9 @@
     <ClCompile Include="partNameCheck.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="complexSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EquipmentType.h">
@@ -84,6 +87,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Lab3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="complexSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
