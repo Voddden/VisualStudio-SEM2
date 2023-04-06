@@ -6,6 +6,7 @@
 #include "vzyatieOstatka.h"
 #include "search.h"
 #include "sortDate.h"
+#include "unionSort.h"
 
 /*
 Реализовать операцию взятия остатка от деления на число, передаваемое через
@@ -32,16 +33,33 @@ void main(int argc, int* argv[])
 	default:
 		printf("Error! Invalid data"); exit(1);
 	}
-	
+
 	printArr(arr, size, unionType);
 
-	search(arr, size, unionType);
+	switch (inputNatural("1 - выполнить поиск, 2 - пропустить\n")) {
+	case 1:
+		search(arr, size, unionType);
+		break;
+	case 2:
+		break;
+	default:
+		puts("Error! Invalid data"); exit(1);
+	}
 
-	printf("\n\t\t--- Сортировка ---\n");
 
-	//sortDate(arr, size, unionType);
+	puts("\n");
+	switch (inputNatural("1 - выполнить сортировку, 2 - пропустить\n")) {
+	case 1:
+		printf("\n\t\t--- Сортировка ---\n");
+		//sortDate(arr, size, unionType);
+		unionSort(arr, size, unionType);
+		printf("Массив после сортировки:\n\n");
+		printArr(arr, size, unionType);
+		break;
+	case 2:
+		break;
+	default:
+		printf("Error! Invalid data"); exit(1);
+	}
 
-
-	printf("Массив после сортировки:\n\n");
-	printArr(arr, size, unionType);
 }

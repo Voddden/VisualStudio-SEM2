@@ -47,7 +47,7 @@ void swapEquipment(Equipment& e1, Equipment& e2, int commonUnion) {
 
 }
 
-void equipCpy(Equipment destination, Equipment source, int commonUnion) {
+void equipCpy(Equipment& destination, Equipment source, int commonUnion) {
 	destination.id = source.id;
 
 	strcpy(destination.name, source.name);
@@ -81,9 +81,11 @@ void sortType1(Equipment* arr, const int size, int* unionType) {
 	}
 	sizeMas = g;
 	Equipment* mas = (Equipment*)calloc(g, sizeof(int));
+	int k = 0;
 	for (int i = 0; i < size; ++i) {
 		if (unionType[i] == 1) {
-			equipCpy(mas[i], arr[i], unionType[i]);
+			equipCpy(mas[k], arr[i], unionType[i]);
+			++k;
 		}
 	}
 
@@ -93,13 +95,15 @@ void sortType1(Equipment* arr, const int size, int* unionType) {
 			if (mas[b].type.s1.shootSpeed > mas[b + 1].type.s1.shootSpeed)
 				swapEquipment(mas[b], mas[b + 1], 1);
 	//
-
+	int p = 0;
 	for (int i = 0; i < size; ++i) {
 		if (unionType[i] == 1) {
-			equipCpy(arr[i], mas[i], unionType[i]);
+			equipCpy(arr[i], mas[p], unionType[i]);
+			++p;
 		}
 	}
 
+	free(mas);
 }
 
 void sortType2(Equipment* arr, const int size, int* unionType) {
@@ -111,9 +115,11 @@ void sortType2(Equipment* arr, const int size, int* unionType) {
 	}
 	sizeMas = g;
 	Equipment* mas = (Equipment*)calloc(g, sizeof(int));
+	int k = 0;
 	for (int i = 0; i < size; ++i) {
 		if (unionType[i] == 2) {
-			equipCpy(mas[i], arr[i], unionType[i]);
+			equipCpy(mas[k], arr[i], unionType[i]);
+			++k;
 		}
 	}
 
@@ -124,12 +130,14 @@ void sortType2(Equipment* arr, const int size, int* unionType) {
 				swapEquipment(mas[b], mas[b + 1], 2);
 	//
 
+	int p = 0;
 	for (int i = 0; i < size; ++i) {
 		if (unionType[i] == 2) {
-			equipCpy(arr[i], mas[i], unionType[i]);
+			equipCpy(arr[i], mas[p], unionType[i]);
+			++p;
 		}
 	}
-
+	free(mas);
 }
 
 void unionSort(Equipment* arr, const int size, int* unionType) 
