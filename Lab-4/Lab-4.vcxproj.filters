@@ -27,6 +27,15 @@
     <ClCompile Include="defaultValues.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="vsyatieOstatka.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="search.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sortEquipment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EquipmentType.h">
@@ -39,6 +48,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="defaultValues.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vzyatieOstatka.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="search.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sortEquipment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

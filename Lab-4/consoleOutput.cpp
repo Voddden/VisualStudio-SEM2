@@ -26,3 +26,11 @@ void printArr(Equipment* arr, const int size, int* unionType) {
 	}
 	puts("===============");
 }
+
+void printEquipment(Equipment e, int i, int* unionType) {
+	printf("=============== arr[%d]\n", i);
+	printf("id = %d\nname = %s", e.id, e.name);
+	printType(e, unionType[i-1]);
+	printf("\nquantity = %d\ndate = %s\n", e.quantity, e.date);
+	printf("===============");
+}

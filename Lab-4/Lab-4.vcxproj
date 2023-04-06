@@ -133,12 +133,18 @@
     <ClCompile Include="consoleOutput.cpp" />
     <ClCompile Include="defaultValues.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="search.cpp" />
+    <ClCompile Include="sortEquipment.cpp" />
+    <ClCompile Include="vsyatieOstatka.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="consoleInput.h" />
     <ClInclude Include="consoleOutput.h" />
     <ClInclude Include="defaultValues.h" />
     <ClInclude Include="EquipmentType.h" />
+    <ClInclude Include="search.h" />
+    <ClInclude Include="sortEquipment.h" />
+    <ClInclude Include="vzyatieOstatka.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
