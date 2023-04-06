@@ -16,18 +16,26 @@
 */
 
 
-// Фукнция взятия остатка от деления на число equipment.number
 
+
+
+
+
+// Функция взятия остатка от деления на число equipment.number
 int ostatok(int left_expr, int right_expr) {
 	return left_expr % right_expr;
 }
 
+
+
 void main(int argc, char* argv[]) 
 {
 	setlocale(LC_ALL, "ru");
-	Equipment equipment;
-	equipment.number = atoi(argv[1]);
+	Equipment arr[100] = {}; int size = 0;
+	arr[0].number = atoi(argv[1]); size = 1;
 	
 	printf("%d", ostatok(inputNatural("Введите число, от которого нужно взять остаток: "), equipment.number));
+
+
 	
 }

@@ -128,10 +128,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="addEquipment.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="scan-printEquipment.cpp" />
+    <ClCompile Include="shotSpeedSearchSort.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="addEquipment.h" />
     <ClInclude Include="scan-printEquipment.h" />
     <ClInclude Include="TypeDefinition.h" />
   </ItemGroup>

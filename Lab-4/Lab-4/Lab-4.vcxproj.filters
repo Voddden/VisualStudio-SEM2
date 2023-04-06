@@ -21,12 +21,21 @@
     <ClCompile Include="scan-printEquipment.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="addEquipment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shotSpeedSearchSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="scan-printEquipment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TypeDefinition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="addEquipment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
