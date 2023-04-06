@@ -1,5 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include "sortEquipment.h"
+#include "sortDate.h"
 
 long calc_month(long month) {
 	int res = 0;

@@ -33,7 +33,10 @@
     <ClCompile Include="search.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="sortEquipment.cpp">
+    <ClCompile Include="sortDate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unionSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -56,7 +59,10 @@
     <ClInclude Include="search.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="sortEquipment.h">
+    <ClInclude Include="sortDate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unionSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

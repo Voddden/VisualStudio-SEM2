@@ -5,7 +5,7 @@
 
 #include "vzyatieOstatka.h"
 #include "search.h"
-#include "sortEquipment.h"
+#include "sortDate.h"
 
 /*
 Реализовать операцию взятия остатка от деления на число, передаваемое через
@@ -37,8 +37,11 @@ void main(int argc, int* argv[])
 
 	search(arr, size, unionType);
 
-	printf("\n--- Сортировка ---\n");
-	sortDate(arr, size, unionType);
+	printf("\n\t\t--- Сортировка ---\n");
+
+	//sortDate(arr, size, unionType);
+
+
 	printf("Массив после сортировки:\n\n");
 	printArr(arr, size, unionType);
 }
