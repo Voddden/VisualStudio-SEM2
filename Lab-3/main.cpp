@@ -42,8 +42,8 @@ void main()
 		break;
 	case 2:
 		// 	printf("Список по умолчанию:\n");
-		add(list, size, 1, "watergun", "very splashy", 10, "08.03.2003");
-		add(list, size, 2, "gun", "lasertype", 4, "09.03.2023");
+		add(list, size, 1, "gunwater", "lasertype", 10, "08.03.2003");
+		add(list, size, 1, "gun", "aassd", 4, "09.03.2023");
 		add(list, size, 3, "shovel", "pocket edition", 3, "05.03.1995");
 		add(list, size, 4, "computer", "Asus", 50, "01.03.1945");
 		add(list, size, 5, "lamp", "kinda cute", 6, "07.03.2023");
