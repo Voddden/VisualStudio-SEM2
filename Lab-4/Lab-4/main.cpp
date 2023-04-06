@@ -16,17 +16,18 @@
 */
 
 
-void main() {
+// ‘укнци€ вз€ти€ остатка от делени€ на число equipment.number
+
+int ostatok(int left_expr, int right_expr) {
+	return left_expr % right_expr;
+}
+
+void main(int argc, char* argv[]) 
+{
 	setlocale(LC_ALL, "ru");
-	printf("¬ведите число\n");
-	Equipment f;
-	f.number = inputNatural("number = ");
-	switch (f.number)
-	{
-	case 1:
-		;
-		break;
-	case 2:
-		;
-	}
+	Equipment equipment;
+	equipment.number = atoi(argv[1]);
+	
+	printf("%d", ostatok(inputNatural("¬ведите число, от которого нужно вз€ть остаток: "), equipment.number));
+	
 }
