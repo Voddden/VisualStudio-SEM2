@@ -33,6 +33,7 @@ void main(int argc, int* argv[])
 	default:
 		printf("Error! Invalid data"); exit(1);
 	}
+	//consoleInput(arr, size, unionType);
 
 	printArr(arr, size, unionType);
 

@@ -7,22 +7,20 @@
 
 struct Equipment {
 	int id;
-	char name[50];
+	char name[50] = {};
 	union {
 		struct {
 			int shootSpeed;
 			int weight;
-			enum subType {
-				subtype1, subtype2, subtype3
-			};
+			//enum subType { subtype1, subtype2, subtype3 };
 			int SUBTYPE;
 
 		} s1;
 		struct {
-			char purpose[50];
-			char price[50];
+			char purpose[50] = {};
+			char price[50] = {};
 		} s2;
 	} type;
 	int quantity;
-	char date[50];
+	char date[50] = {};
 };

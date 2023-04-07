@@ -103,7 +103,7 @@ void sortType1(Equipment* arr, const int size, int* unionType) {
 		}
 	}
 
-	free(mas);
+	//free(mas);
 }
 
 void sortType2(Equipment* arr, const int size, int* unionType) {
@@ -137,7 +137,7 @@ void sortType2(Equipment* arr, const int size, int* unionType) {
 			++p;
 		}
 	}
-	free(mas);
+	//free(mas);
 }
 
 void unionSort(Equipment* arr, const int size, int* unionType) 

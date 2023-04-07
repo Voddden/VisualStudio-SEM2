@@ -43,32 +43,32 @@ void defaultValues(Equipment* arr, int& size, int* unionType) {
 	arr[2].quantity = 14;
 	strcpy(arr[2].date, "02.11.1989");
 
-	// 4
+	//// 4
 
 
-	++size;
+	//++size;
 
-	arr[3].id = 4;
-	strcpy(arr[3].name, "robot");
+	//arr[3].id = 4;
+	//strcpy(arr[3].name, "robot");
 
-	unionType[3] = 2;
-	strcpy(arr[3].type.s2.price, "300$");
-	strcpy(arr[3].type.s2.purpose, "Alive");
+	//unionType[3] = 2;
+	//strcpy(arr[3].type.s2.price, "300$");
+	//strcpy(arr[3].type.s2.purpose, "Alive");
 
-	arr[3].quantity = 10;
-	strcpy(arr[3].date, "06.04.2023");
+	//arr[3].quantity = 10;
+	//strcpy(arr[3].date, "06.04.2023");
 
-	// 5
-	++size;
+	//// 5
+	//++size;
 
-	arr[4].id = 5;
-	strcpy(arr[4].name, "Tank Abrams");
+	//arr[4].id = 5;
+	//strcpy(arr[4].name, "Tank Abrams");
 
-	unionType[4] = 1;
-	arr[4].type.s1.shootSpeed = 216;
-	arr[4].type.s1.weight = 50;
-	//arr[4].type.s1.subtype2;
+	//unionType[4] = 1;
+	//arr[4].type.s1.shootSpeed = 216;
+	//arr[4].type.s1.weight = 50;
+	////arr[4].type.s1.subtype2;
 
-	arr[4].quantity = 14;
-	strcpy(arr[4].date, "02.11.1989");
+	//arr[4].quantity = 14;
+	//strcpy(arr[4].date, "02.11.1989");
 }

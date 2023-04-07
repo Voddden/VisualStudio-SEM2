@@ -8,7 +8,8 @@ void inputType(Equipment& e, int i, int* unionType) {
 		unionType[i] = 1;
 		e.type.s1.shootSpeed = inputRealPositive("скорострельность = ");
 		e.type.s1.weight = inputRealPositive("вес = ");
-		e.type.s1.SUBTYPE = e.type.s1.subtype1;
+		//e.type.s1.SUBTYPE = e.type.s1.subtype1;
+		e.type.s1.SUBTYPE = 3;
 		break;
 	case 2:
 		unionType[i] = 2;
