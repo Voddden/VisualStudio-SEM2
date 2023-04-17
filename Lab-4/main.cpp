@@ -18,7 +18,7 @@
 */
 
 // id, название, тип, кол-во, дата
-void main(int argc, int* argv[])
+void main(int argc, char* argv[])
 {
 	setlocale(LC_ALL, "ru");
 	Equipment arr[100] = {}; int size = 0;
@@ -63,4 +63,9 @@ void main(int argc, int* argv[])
 		printf("Error! Invalid data"); exit(1);
 	}
 
+	//int num  = inputNaturalAnd0("¬ведите число дл€ вз€ти€ остатка: ");
+	//int argvv = atoi(argv[1]);
+	//int res = vzyatieOstatka(num, argvv);
+	//printf("%d\n", res);
+	//printf("\n%d", vzyatieOstatka(inputNatural("¬ведите число дл€ вз€ти€ остатка: "), atoi(argv[1]))); exit(0);
 }

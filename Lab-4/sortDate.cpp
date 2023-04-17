@@ -55,7 +55,7 @@ void sortDate(Equipment* arr, const int size, int* unionType) {
 		year += (arr[i].date[7] - 48) * 100;
 		year += (arr[i].date[6] - 48) * 1000;
 
-		mas[i] += day - 1;
+		mas[i] += static_cast<long long>(day) - 1;
 		mas[i] += calc_month(month - 1);
 		mas[i] += (year - 1) * 365;
 	}

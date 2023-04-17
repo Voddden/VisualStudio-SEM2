@@ -47,29 +47,29 @@ void swapEquipment(Equipment& e1, Equipment& e2, int commonUnion) {
 
 }
 
-void equipCpy(Equipment& destination, Equipment source, int commonUnion) {
-	destination.id = source.id;
+void equipCpy(Equipment* destination, Equipment* source, int commonUnion) {
+	destination->id = source->id;
 
-	strcpy(destination.name, source.name);
+	strcpy(destination->name, source->name);
 
 	switch (commonUnion) {
 	case 1:
-		destination.type.s1.shootSpeed = source.type.s1.shootSpeed;
+		destination->type.s1.shootSpeed = source->type.s1.shootSpeed;
 
-		destination.type.s1.weight = source.type.s1.weight;
+		destination->type.s1.weight = source->type.s1.weight;
 
-		destination.type.s1.SUBTYPE = source.type.s1.SUBTYPE;
+		destination->type.s1.SUBTYPE = source->type.s1.SUBTYPE;
 		break;
 	case 2:
-		strcpy(destination.type.s2.purpose, source.type.s2.purpose);
+		strcpy(destination->type.s2.purpose, source->type.s2.purpose);
 
-		strcpy(destination.type.s2.price, source.type.s2.price);
+		strcpy(destination->type.s2.price, source->type.s2.price);
 		break;
 	}
 
-	destination.quantity = source.quantity;
+	destination->quantity = source->quantity;
 
-	strcpy(destination.date, source.date);
+	strcpy(destination->date, source->date);
 }
 
 void sortType1(Equipment* arr, const int size, int* unionType) {
@@ -84,7 +84,7 @@ void sortType1(Equipment* arr, const int size, int* unionType) {
 	int k = 0;
 	for (int i = 0; i < size; ++i) {
 		if (unionType[i] == 1) {
-			equipCpy(mas[k], arr[i], unionType[i]);
+			equipCpy(&mas[k], &arr[i], unionType[i]);
 			++k;
 		}
 	}
@@ -98,7 +98,7 @@ void sortType1(Equipment* arr, const int size, int* unionType) {
 	int p = 0;
 	for (int i = 0; i < size; ++i) {
 		if (unionType[i] == 1) {
-			equipCpy(arr[i], mas[p], unionType[i]);
+			equipCpy(&arr[i], &mas[p], unionType[i]);
 			++p;
 		}
 	}
@@ -118,7 +118,7 @@ void sortType2(Equipment* arr, const int size, int* unionType) {
 	int k = 0;
 	for (int i = 0; i < size; ++i) {
 		if (unionType[i] == 2) {
-			equipCpy(mas[k], arr[i], unionType[i]);
+			equipCpy(&mas[k], &arr[i], unionType[i]);
 			++k;
 		}
 	}
@@ -126,15 +126,14 @@ void sortType2(Equipment* arr, const int size, int* unionType) {
 	// сортировка mas[] по первой букве поля "назначение" (по алфавиту)
 	for (int a = 0; a < sizeMas - 1; ++a)
 		for (int b = 0; b < sizeMas - 1 - a; ++b)
-			if (strcmp(mas[b].type.s2.purpose, mas[b + 1].type.s2.purpose))
-				swapEquipment(mas[b], mas[b + 1], 2);
+			if (strcmp(mas[b].type.s2.purpose, mas[b + 1].type.s2.purpose)) swapEquipment(mas[b], mas[b + 1], 2);
 	//
 
-	int p = 0;
+	k = 0;
 	for (int i = 0; i < size; ++i) {
 		if (unionType[i] == 2) {
-			equipCpy(arr[i], mas[p], unionType[i]);
-			++p;
+			equipCpy(&arr[i], &mas[k], unionType[i]);
+			++k;
 		}
 	}
 	//free(mas);

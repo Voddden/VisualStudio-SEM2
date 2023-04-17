@@ -6,7 +6,7 @@ void defaultValues(Equipment* arr, int& size, int* unionType) {
 	++size;
 
 	arr[0].id = 1;
-	strcpy(arr[0].name, "watergun");
+	strcpy(arr[0].name, "gun");
 
 	unionType[0] = 1;
 	arr[0].type.s1.shootSpeed = 576;
@@ -16,32 +16,32 @@ void defaultValues(Equipment* arr, int& size, int* unionType) {
 	arr[0].quantity = 77;
 	strcpy(arr[0].date, "25.10.2022");
 
-	// 2
-	++size;
+	//// 2
+	//++size;
 
-	arr[1].id = 2;
-	strcpy(arr[1].name, "laser");
+	//arr[1].id = 2;
+	//strcpy(arr[1].name, "laser");
 
-	unionType[1] = 2;
-	strcpy(arr[1].type.s2.price, "300$");
-	strcpy(arr[1].type.s2.purpose, "Zkill");
+	//unionType[1] = 2;
+	//strcpy(arr[1].type.s2.price, "300$");
+	//strcpy(arr[1].type.s2.purpose, "Zkill");
 
-	arr[1].quantity = 10;
-	strcpy(arr[1].date, "06.04.2023");
+	//arr[1].quantity = 10;
+	//strcpy(arr[1].date, "06.04.2023");
 
 	// 3
 	++size;
 
-	arr[2].id = 3;
-	strcpy(arr[2].name, "AK-74");
+	arr[1].id = 3;
+	strcpy(arr[1].name, "watergun");
 
-	unionType[2] = 1;
-	arr[2].type.s1.shootSpeed = 1268;
-	arr[2].type.s1.weight = 50;
+	unionType[1] = 1;
+	arr[1].type.s1.shootSpeed = 268;
+	arr[1].type.s1.weight = 50;
 	//arr[2].type.s1.subtype2;
 
-	arr[2].quantity = 14;
-	strcpy(arr[2].date, "02.11.1989");
+	arr[1].quantity = 14;
+	strcpy(arr[1].date, "02.11.1989");
 
 	//// 4
 
