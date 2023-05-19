@@ -18,9 +18,27 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="push.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="printStack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FILO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="push.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="printStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
