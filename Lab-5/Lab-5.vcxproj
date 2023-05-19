@@ -127,16 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="pop.cpp" />
-    <ClCompile Include="printStack.cpp" />
-    <ClCompile Include="push.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="FILO.h" />
     <ClInclude Include="pop.h" />
     <ClInclude Include="printStack.h" />
     <ClInclude Include="push.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Lab-5.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
